@@ -1,0 +1,27 @@
+#!/bin/bash
+
+echo "Dando início ao segundo script linux"
+
+echo "Atualizar o servidor:"
+
+apt-get update -y
+
+apt-get upgrade -y
+
+echo "Instalar o Apache2"
+
+apt-get install apache2 -y
+
+echo "Instalar o unzip"
+
+apt-get install unzip -y
+
+echo "Baixando a aplicação"
+
+wget -P /tmp https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
+
+echo "Unzip dos arquivos já direcionando para a pasta do Apache2"
+
+unzip /tmp/main.zip -d /var/www/html/
+
+echo "Após o unzip direcionado para a pasta ja sera feito a copia do arquivo e o desafio estará concluído"
